@@ -21,7 +21,7 @@ namespace Jukebox
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            listImport.Items.Clear();
         }
 
         private void btnImport_Click(object sender, EventArgs e)
