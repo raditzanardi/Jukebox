@@ -67,11 +67,11 @@
             this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(317, 9);
+            this.label1.Location = new System.Drawing.Point(275, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 17);
+            this.label1.Size = new System.Drawing.Size(181, 17);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Copyright";
+            this.label1.Text = "Copyright Radit Zanardi";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtPlayingNow
@@ -98,7 +98,9 @@
             this.lstboxTracks.HorizontalScrollbar = true;
             this.lstboxTracks.ItemHeight = 16;
             this.lstboxTracks.Items.AddRange(new object[] {
-            "Big Bad John - Jimmy Dean.mp3"});
+            "Big Bad John - Jimmy Dean.mp3",
+            "Track 2",
+            "Track 3"});
             this.lstboxTracks.Location = new System.Drawing.Point(110, 162);
             this.lstboxTracks.Name = "lstboxTracks";
             this.lstboxTracks.Size = new System.Drawing.Size(237, 100);
@@ -119,7 +121,7 @@
             // axWindowsMediaPlayer1
             // 
             this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(12, 25);
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(58, 60);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
             this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(289, 45);

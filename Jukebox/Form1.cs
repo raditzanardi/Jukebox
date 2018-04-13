@@ -46,6 +46,8 @@ namespace Jukebox
 
                 txtPlayingNow.Text = lstboxTracks.SelectedItem.ToString();
             }
+
         }
+            
     }
 }
