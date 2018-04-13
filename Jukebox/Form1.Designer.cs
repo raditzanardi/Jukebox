@@ -80,7 +80,7 @@
             this.txtPlayingNow.Location = new System.Drawing.Point(110, 290);
             this.txtPlayingNow.Name = "txtPlayingNow";
             this.txtPlayingNow.ReadOnly = true;
-            this.txtPlayingNow.Size = new System.Drawing.Size(225, 22);
+            this.txtPlayingNow.Size = new System.Drawing.Size(237, 22);
             this.txtPlayingNow.TabIndex = 4;
             // 
             // txtGenreTitle
@@ -89,7 +89,7 @@
             this.txtGenreTitle.Location = new System.Drawing.Point(110, 143);
             this.txtGenreTitle.Name = "txtGenreTitle";
             this.txtGenreTitle.ReadOnly = true;
-            this.txtGenreTitle.Size = new System.Drawing.Size(225, 22);
+            this.txtGenreTitle.Size = new System.Drawing.Size(237, 22);
             this.txtGenreTitle.TabIndex = 5;
             // 
             // lstboxTracks
@@ -97,17 +97,21 @@
             this.lstboxTracks.FormattingEnabled = true;
             this.lstboxTracks.HorizontalScrollbar = true;
             this.lstboxTracks.ItemHeight = 16;
+            this.lstboxTracks.Items.AddRange(new object[] {
+            "Big Bad John - Jimmy Dean.mp3"});
             this.lstboxTracks.Location = new System.Drawing.Point(110, 162);
             this.lstboxTracks.Name = "lstboxTracks";
-            this.lstboxTracks.Size = new System.Drawing.Size(225, 100);
+            this.lstboxTracks.Size = new System.Drawing.Size(237, 100);
             this.lstboxTracks.TabIndex = 6;
+            this.lstboxTracks.SelectedIndexChanged += new System.EventHandler(this.lstboxTracks_SelectedIndexChanged);
+            this.lstboxTracks.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstboxTracks_MouseDoubleClick);
             // 
             // lstboxPlaylist
             // 
             this.lstboxPlaylist.BackColor = System.Drawing.Color.Khaki;
             this.lstboxPlaylist.FormattingEnabled = true;
             this.lstboxPlaylist.ItemHeight = 16;
-            this.lstboxPlaylist.Location = new System.Drawing.Point(125, 318);
+            this.lstboxPlaylist.Location = new System.Drawing.Point(132, 318);
             this.lstboxPlaylist.Name = "lstboxPlaylist";
             this.lstboxPlaylist.Size = new System.Drawing.Size(194, 148);
             this.lstboxPlaylist.TabIndex = 7;
@@ -125,7 +129,7 @@
             // 
             this.hScrollBar1.Location = new System.Drawing.Point(110, 265);
             this.hScrollBar1.Name = "hScrollBar1";
-            this.hScrollBar1.Size = new System.Drawing.Size(225, 21);
+            this.hScrollBar1.Size = new System.Drawing.Size(237, 21);
             this.hScrollBar1.TabIndex = 9;
             // 
             // Form1
@@ -134,7 +138,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Jukebox.Properties.Resources._6a0120a7b5f86a970b0153936c0efb970b;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(447, 653);
+            this.ClientSize = new System.Drawing.Size(468, 683);
             this.Controls.Add(this.hScrollBar1);
             this.Controls.Add(this.lstboxPlaylist);
             this.Controls.Add(this.lstboxTracks);

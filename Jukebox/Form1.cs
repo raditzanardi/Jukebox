@@ -33,5 +33,19 @@ namespace Jukebox
             SetupForm form3 = new SetupForm();
             form3.ShowDialog();
         }
+
+        private void lstboxTracks_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void lstboxTracks_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (lstboxTracks.SelectedItem != null)
+            {
+
+                txtPlayingNow.Text = lstboxTracks.SelectedItem.ToString();
+            }
+        }
     }
 }
