@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.IO;
 namespace Jukebox
 {
     public partial class Form1 : Form
@@ -16,6 +16,10 @@ namespace Jukebox
         {
             InitializeComponent();
         }
+        public string StrApplicationMetdiaPath = Directory.GetCurrentDirectory();
+        public int Int_Number_of_Genre;
+        ListBox[] Media_Library;
+        bool IsPlaying = false;
 
         private void label1_Click(object sender, EventArgs e)
         {
