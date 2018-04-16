@@ -37,6 +37,7 @@
             this.lstboxTracks = new System.Windows.Forms.ListBox();
             this.lstboxPlaylist = new System.Windows.Forms.ListBox();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,19 +76,19 @@
             // txtPlayingNow
             // 
             this.txtPlayingNow.BackColor = System.Drawing.Color.Lime;
-            this.txtPlayingNow.Location = new System.Drawing.Point(110, 290);
+            this.txtPlayingNow.Location = new System.Drawing.Point(101, 290);
             this.txtPlayingNow.Name = "txtPlayingNow";
             this.txtPlayingNow.ReadOnly = true;
-            this.txtPlayingNow.Size = new System.Drawing.Size(237, 22);
+            this.txtPlayingNow.Size = new System.Drawing.Size(246, 22);
             this.txtPlayingNow.TabIndex = 4;
             // 
             // txtGenreTitle
             // 
             this.txtGenreTitle.BackColor = System.Drawing.Color.Salmon;
-            this.txtGenreTitle.Location = new System.Drawing.Point(110, 143);
+            this.txtGenreTitle.Location = new System.Drawing.Point(101, 143);
             this.txtGenreTitle.Name = "txtGenreTitle";
             this.txtGenreTitle.ReadOnly = true;
-            this.txtGenreTitle.Size = new System.Drawing.Size(237, 22);
+            this.txtGenreTitle.Size = new System.Drawing.Size(246, 22);
             this.txtGenreTitle.TabIndex = 5;
             // 
             // lstboxTracks
@@ -95,7 +96,7 @@
             this.lstboxTracks.FormattingEnabled = true;
             this.lstboxTracks.HorizontalScrollbar = true;
             this.lstboxTracks.ItemHeight = 16;
-            this.lstboxTracks.Location = new System.Drawing.Point(110, 162);
+            this.lstboxTracks.Location = new System.Drawing.Point(101, 160);
             this.lstboxTracks.Name = "lstboxTracks";
             this.lstboxTracks.Size = new System.Drawing.Size(246, 100);
             this.lstboxTracks.TabIndex = 6;
@@ -120,6 +121,13 @@
             this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(289, 45);
             this.axWindowsMediaPlayer1.TabIndex = 8;
             // 
+            // hScrollBar1
+            // 
+            this.hScrollBar1.Location = new System.Drawing.Point(101, 263);
+            this.hScrollBar1.Name = "hScrollBar1";
+            this.hScrollBar1.Size = new System.Drawing.Size(246, 21);
+            this.hScrollBar1.TabIndex = 9;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -127,6 +135,7 @@
             this.BackgroundImage = global::Jukebox.Properties.Resources._6a0120a7b5f86a970b0153936c0efb970b;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(468, 683);
+            this.Controls.Add(this.hScrollBar1);
             this.Controls.Add(this.lstboxPlaylist);
             this.Controls.Add(this.lstboxTracks);
             this.Controls.Add(this.txtGenreTitle);
@@ -153,6 +162,7 @@
         private System.Windows.Forms.ListBox lstboxTracks;
         private System.Windows.Forms.ListBox lstboxPlaylist;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+        private System.Windows.Forms.HScrollBar hScrollBar1;
     }
 }
 

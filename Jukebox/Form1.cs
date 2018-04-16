@@ -19,6 +19,7 @@ namespace Jukebox
         string[] extensions = new[] { ".mp3", ".wma", ".wav", ".MP3", ".WMA" };
 
         FileInfo[] files;
+        string[] genre = new string[3];
 
         private void button2_Click(object sender, EventArgs e)
         {
