@@ -47,8 +47,7 @@ namespace Jukebox
         {
             if (lstboxTracks.SelectedItem != null)
             {
-
-                txtPlayingNow.Text = lstboxTracks.SelectedItem.ToString();
+                lstboxPlaylist.Items.Add(lstboxTracks.SelectedItem);
             }
 
         }
