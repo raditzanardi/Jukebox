@@ -16,15 +16,9 @@ namespace Jukebox
         {
             InitializeComponent();
         }
-        public string StrApplicationMetdiaPath = Directory.GetCurrentDirectory();
-        public int Int_Number_of_Genre;
-        ListBox[] Media_Library;
-        bool IsPlaying = false;
+        string[] extensions = new[] { ".mp3", ".wma", ".wav", ".MP3", ".WMA" };
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        FileInfo[] files;
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -38,19 +32,27 @@ namespace Jukebox
             form3.ShowDialog();
         }
 
-        private void lstboxTracks_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void lstboxTracks_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             if (lstboxTracks.SelectedItem != null)
             {
-                lstboxPlaylist.Items.Add(lstboxTracks.SelectedItem);
+                txtPlayingNow.Text = lstboxTracks.SelectedItem.ToString();
+                axWindowsMediaPlayer1.URL = files[lstboxTracks.SelectedIndex].FullName;
+               
             }
 
         }
-            
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.Visible = false;
+            DirectoryInfo dinfo = new DirectoryInfo(@"C:\Tracks");
+            files = dinfo.EnumerateFiles().Where(f => extensions.Contains(f.Extension.ToLower())).ToArray();
+
+            for (int i = 0; i < files.Length; i++)
+            {
+                lstboxTracks.Items.Add(files[i]);
+            }
+        }
     }
 }
