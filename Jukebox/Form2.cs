@@ -17,11 +17,6 @@ namespace Jukebox
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void AboutForm_Load(object sender, EventArgs e)
         {
             
@@ -29,6 +24,7 @@ namespace Jukebox
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //Closes the form
             this.Close();
 
         }

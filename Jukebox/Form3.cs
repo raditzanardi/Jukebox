@@ -21,12 +21,15 @@ namespace Jukebox
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //Deletes all the items in the list box
             listImport.Items.Clear();
         }
 
         private void btnImport_Click(object sender, EventArgs e)
         {
+            //Opens the file browser for user to select files
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            //Enables user to select more than one file at once
             openFileDialog1.Multiselect = true;
 
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)

@@ -16,25 +16,30 @@ namespace Jukebox
         {
             InitializeComponent();
         }
+        //Creates and array of extensions that the form will load
         string[] extensions = new[] { ".mp3", ".wma", ".wav", ".MP3", ".WMA" };
 
         FileInfo[] files;
+        //Creates array of genres
         string[] genres = new string[] { "General", "Test", "Others" };
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //Opens the About form when pressing the button
             AboutForm form2 = new AboutForm();
             form2.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //Opens the Setup form when pressing the button
             SetupForm form3 = new SetupForm();
             form3.ShowDialog();
         }
 
         private void lstboxTracks_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            //After double clicking on the track, it will start to play and the title of the track will appear in the now playing box
             if (lstboxTracks.SelectedItem != null)
             {
                 txtPlayingNow.Text = lstboxTracks.SelectedItem.ToString();
@@ -46,7 +51,10 @@ namespace Jukebox
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //Makes the media player invisible to the user
             axWindowsMediaPlayer1.Visible = false;
+
+            //Load the tracks into the application
             DirectoryInfo dinfo = new DirectoryInfo(@"C:\Tracks");
             files = dinfo.EnumerateFiles().Where(f => extensions.Contains(f.Extension.ToLower())).ToArray();
 
