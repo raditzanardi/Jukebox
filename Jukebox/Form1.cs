@@ -60,7 +60,7 @@ namespace Jukebox
             axWindowsMediaPlayer1.Visible = false;
 
             //Load the tracks into the application
-            DirectoryInfo dinfo = new DirectoryInfo(@"C:\Tracks");
+            DirectoryInfo dinfo = new DirectoryInfo(@"C:\Users\Radit\source\repos\Jukebox\Tracks");
             files = dinfo.EnumerateFiles().Where(f => extensions.Contains(f.Extension.ToLower())).ToArray();
 
             for (int i = 0; i < files.Length; i++)
