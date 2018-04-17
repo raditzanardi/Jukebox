@@ -22,7 +22,13 @@ namespace Jukebox
         private void button2_Click(object sender, EventArgs e)
         {
             //Deletes all the items in the list box
-            listImport.Items.Clear();
+            lstImport.Items.Clear();
+        }
+
+        private void btnCopy_Click(object sender, EventArgs e)
+        {
+            //Copies the trsck from the imported tracks list box to the present genre tracks list box
+            lstTracks.Items.Add(lstImport.SelectedItem);
         }
 
         private void btnImport_Click(object sender, EventArgs e)
@@ -38,7 +44,7 @@ namespace Jukebox
                 paths = openFileDialog1.FileNames;
                 for (int i = 0; i < files.Length; i++)
                 {
-                    listImport.Items.Add(files[i]);
+                    lstImport.Items.Add(files[i]);
                 }
             }
         }

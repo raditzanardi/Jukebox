@@ -31,7 +31,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnClearImport = new System.Windows.Forms.Button();
             this.btnImport = new System.Windows.Forms.Button();
-            this.listImport = new System.Windows.Forms.ListBox();
+            this.lstImport = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnPreviousGenre = new System.Windows.Forms.Button();
             this.btnNextGenre = new System.Windows.Forms.Button();
@@ -39,7 +39,7 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lstTracks = new System.Windows.Forms.ListBox();
             this.btnCopy = new System.Windows.Forms.Button();
             this.btnMove = new System.Windows.Forms.Button();
             this.btnDeleteTrack = new System.Windows.Forms.Button();
@@ -53,7 +53,7 @@
             // 
             this.groupBox1.Controls.Add(this.btnClearImport);
             this.groupBox1.Controls.Add(this.btnImport);
-            this.groupBox1.Controls.Add(this.listImport);
+            this.groupBox1.Controls.Add(this.lstImport);
             this.groupBox1.Location = new System.Drawing.Point(12, 27);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(351, 477);
@@ -81,14 +81,14 @@
             this.btnImport.UseVisualStyleBackColor = true;
             this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             // 
-            // listImport
+            // lstImport
             // 
-            this.listImport.FormattingEnabled = true;
-            this.listImport.ItemHeight = 16;
-            this.listImport.Location = new System.Drawing.Point(6, 21);
-            this.listImport.Name = "listImport";
-            this.listImport.Size = new System.Drawing.Size(339, 356);
-            this.listImport.TabIndex = 0;
+            this.lstImport.FormattingEnabled = true;
+            this.lstImport.ItemHeight = 16;
+            this.lstImport.Location = new System.Drawing.Point(6, 21);
+            this.lstImport.Name = "lstImport";
+            this.lstImport.Size = new System.Drawing.Size(339, 356);
+            this.lstImport.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -98,7 +98,7 @@
             this.groupBox2.Controls.Add(this.btnAdd);
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.listBox1);
+            this.groupBox2.Controls.Add(this.lstTracks);
             this.groupBox2.Location = new System.Drawing.Point(519, 27);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(358, 477);
@@ -163,14 +163,14 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Genre Title";
             // 
-            // listBox1
+            // lstTracks
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(6, 59);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(346, 324);
-            this.listBox1.TabIndex = 0;
+            this.lstTracks.FormattingEnabled = true;
+            this.lstTracks.ItemHeight = 16;
+            this.lstTracks.Location = new System.Drawing.Point(6, 59);
+            this.lstTracks.Name = "lstTracks";
+            this.lstTracks.Size = new System.Drawing.Size(346, 324);
+            this.lstTracks.TabIndex = 0;
             // 
             // btnCopy
             // 
@@ -180,6 +180,7 @@
             this.btnCopy.TabIndex = 2;
             this.btnCopy.Text = "Copy Track >>";
             this.btnCopy.UseVisualStyleBackColor = true;
+            this.btnCopy.Click += new System.EventHandler(this.btnCopy_Click);
             // 
             // btnMove
             // 
@@ -243,7 +244,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnClearImport;
         private System.Windows.Forms.Button btnImport;
-        private System.Windows.Forms.ListBox listImport;
+        private System.Windows.Forms.ListBox lstImport;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnCopy;
         private System.Windows.Forms.Button btnMove;
@@ -253,7 +254,7 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lstTracks;
         private System.Windows.Forms.Button btnPreviousGenre;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnCancelSetup;
