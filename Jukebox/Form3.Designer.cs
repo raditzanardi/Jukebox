@@ -218,6 +218,7 @@
             this.btnCancelSetup.TabIndex = 6;
             this.btnCancelSetup.Text = "Cancel";
             this.btnCancelSetup.UseVisualStyleBackColor = true;
+            this.btnCancelSetup.Click += new System.EventHandler(this.btnCancelSetup_Click);
             // 
             // SetupForm
             // 

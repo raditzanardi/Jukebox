@@ -28,13 +28,36 @@ namespace Jukebox
         private void btnCopy_Click(object sender, EventArgs e)
         {
             //Copies the tracks from the imported tracks list box to the present genre tracks list box
-            lstTracks.Items.Add(lstImport.SelectedItem);
+            if (lstImport.SelectedItem != null)
+            {
+                lstTracks.Items.Add(lstImport.SelectedItem);
+            }
+            else
+            {
+                MessageBox.Show("You have not selected a track");
+            }
         }
 
         private void btnMove_Click(object sender, EventArgs e)
         {
-            lstTracks.Items.Add(lstImport.SelectedItem);
-            lstImport.Items.Remove(lstImport.SelectedItem);
+            //Moves the track selected into the tracks list box
+            if (lstImport.SelectedItem != null)
+            {
+                lstTracks.Items.Add(lstImport.SelectedItem);
+                lstImport.Items.Remove(lstImport.SelectedItem);
+            }
+            //Shows a message if no track is selected but the button is pressed
+            else
+            {
+                MessageBox.Show("You have not selected a track");
+            }
+           
+        }
+
+        private void btnCancelSetup_Click(object sender, EventArgs e)
+        {
+            //Closes the form
+            this.Close();
         }
 
         private void btnImport_Click(object sender, EventArgs e)
@@ -44,6 +67,7 @@ namespace Jukebox
             //Enables user to select more than one file at once
             openFileDialog1.Multiselect = true;
 
+            //Adds the selected files in to the imported tracks list box
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 files = openFileDialog1.SafeFileNames;
