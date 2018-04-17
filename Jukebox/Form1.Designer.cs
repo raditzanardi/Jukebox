@@ -76,6 +76,7 @@
             // txtPlayingNow
             // 
             this.txtPlayingNow.BackColor = System.Drawing.Color.Lime;
+            this.txtPlayingNow.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPlayingNow.Location = new System.Drawing.Point(101, 290);
             this.txtPlayingNow.Name = "txtPlayingNow";
             this.txtPlayingNow.ReadOnly = true;
