@@ -33,7 +33,7 @@
             this.btnAbout = new System.Windows.Forms.Button();
             this.lblCopyright = new System.Windows.Forms.Label();
             this.txtPlayingNow = new System.Windows.Forms.TextBox();
-            this.txtGenreTitle = new System.Windows.Forms.TextBox();
+            this.txtGenre = new System.Windows.Forms.TextBox();
             this.lstboxTracks = new System.Windows.Forms.ListBox();
             this.lstboxPlaylist = new System.Windows.Forms.ListBox();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
@@ -83,21 +83,22 @@
             this.txtPlayingNow.Size = new System.Drawing.Size(246, 22);
             this.txtPlayingNow.TabIndex = 4;
             // 
-            // txtGenreTitle
+            // txtGenre
             // 
-            this.txtGenreTitle.BackColor = System.Drawing.Color.Salmon;
-            this.txtGenreTitle.Location = new System.Drawing.Point(101, 143);
-            this.txtGenreTitle.Name = "txtGenreTitle";
-            this.txtGenreTitle.ReadOnly = true;
-            this.txtGenreTitle.Size = new System.Drawing.Size(246, 22);
-            this.txtGenreTitle.TabIndex = 5;
+            this.txtGenre.BackColor = System.Drawing.Color.Salmon;
+            this.txtGenre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGenre.Location = new System.Drawing.Point(101, 143);
+            this.txtGenre.Name = "txtGenre";
+            this.txtGenre.ReadOnly = true;
+            this.txtGenre.Size = new System.Drawing.Size(246, 23);
+            this.txtGenre.TabIndex = 5;
             // 
             // lstboxTracks
             // 
             this.lstboxTracks.FormattingEnabled = true;
             this.lstboxTracks.HorizontalScrollbar = true;
             this.lstboxTracks.ItemHeight = 16;
-            this.lstboxTracks.Location = new System.Drawing.Point(101, 160);
+            this.lstboxTracks.Location = new System.Drawing.Point(101, 172);
             this.lstboxTracks.Name = "lstboxTracks";
             this.lstboxTracks.Size = new System.Drawing.Size(246, 100);
             this.lstboxTracks.TabIndex = 6;
@@ -108,7 +109,7 @@
             this.lstboxPlaylist.BackColor = System.Drawing.Color.Khaki;
             this.lstboxPlaylist.FormattingEnabled = true;
             this.lstboxPlaylist.ItemHeight = 16;
-            this.lstboxPlaylist.Location = new System.Drawing.Point(132, 318);
+            this.lstboxPlaylist.Location = new System.Drawing.Point(133, 318);
             this.lstboxPlaylist.Name = "lstboxPlaylist";
             this.lstboxPlaylist.Size = new System.Drawing.Size(194, 148);
             this.lstboxPlaylist.TabIndex = 7;
@@ -124,7 +125,7 @@
             // 
             // hScrollBar1
             // 
-            this.hScrollBar1.Location = new System.Drawing.Point(101, 263);
+            this.hScrollBar1.Location = new System.Drawing.Point(101, 266);
             this.hScrollBar1.Name = "hScrollBar1";
             this.hScrollBar1.Size = new System.Drawing.Size(246, 21);
             this.hScrollBar1.TabIndex = 9;
@@ -139,7 +140,7 @@
             this.Controls.Add(this.hScrollBar1);
             this.Controls.Add(this.lstboxPlaylist);
             this.Controls.Add(this.lstboxTracks);
-            this.Controls.Add(this.txtGenreTitle);
+            this.Controls.Add(this.txtGenre);
             this.Controls.Add(this.txtPlayingNow);
             this.Controls.Add(this.lblCopyright);
             this.Controls.Add(this.btnAbout);
@@ -159,7 +160,7 @@
         private System.Windows.Forms.Button btnAbout;
         private System.Windows.Forms.Label lblCopyright;
         private System.Windows.Forms.TextBox txtPlayingNow;
-        private System.Windows.Forms.TextBox txtGenreTitle;
+        private System.Windows.Forms.TextBox txtGenre;
         private System.Windows.Forms.ListBox lstboxTracks;
         private System.Windows.Forms.ListBox lstboxPlaylist;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;

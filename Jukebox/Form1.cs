@@ -21,7 +21,7 @@ namespace Jukebox
 
         FileInfo[] files;
         //Creates array of genres
-        string[] genres = new string[] { "General", "Test", "Others" };
+        string[] genres = new string[] { "Rap", "Pop", "Others" };
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -40,17 +40,22 @@ namespace Jukebox
         private void lstboxTracks_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             //After double clicking on the track, it will start to play and the title of the track will appear in the now playing box
-            if (lstboxTracks.SelectedItem != null)
+            if (txtPlayingNow.Text == "")
             {
                 txtPlayingNow.Text = lstboxTracks.SelectedItem.ToString();
                 axWindowsMediaPlayer1.URL = files[lstboxTracks.SelectedIndex].FullName;
                
+            }
+            else
+            {
+                lstboxPlaylist.Items.Add(lstboxTracks.SelectedItem);
             }
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            txtGenre.Text = genres[0];
             //Makes the media player invisible to the user
             axWindowsMediaPlayer1.Visible = false;
 
