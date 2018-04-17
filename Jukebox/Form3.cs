@@ -27,8 +27,14 @@ namespace Jukebox
 
         private void btnCopy_Click(object sender, EventArgs e)
         {
-            //Copies the trsck from the imported tracks list box to the present genre tracks list box
+            //Copies the tracks from the imported tracks list box to the present genre tracks list box
             lstTracks.Items.Add(lstImport.SelectedItem);
+        }
+
+        private void btnMove_Click(object sender, EventArgs e)
+        {
+            lstTracks.Items.Add(lstImport.SelectedItem);
+            lstImport.Items.Remove(lstImport.SelectedItem);
         }
 
         private void btnImport_Click(object sender, EventArgs e)
