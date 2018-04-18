@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnSetup = new System.Windows.Forms.Button();
             this.btnAbout = new System.Windows.Forms.Button();
@@ -36,9 +37,10 @@
             this.txtGenre = new System.Windows.Forms.TextBox();
             this.lstboxTracks = new System.Windows.Forms.ListBox();
             this.lstboxPlaylist = new System.Windows.Forms.ListBox();
-            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.MediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.MediaPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSetup
@@ -114,14 +116,14 @@
             this.lstboxPlaylist.Size = new System.Drawing.Size(194, 148);
             this.lstboxPlaylist.TabIndex = 7;
             // 
-            // axWindowsMediaPlayer1
+            // MediaPlayer
             // 
-            this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(13, 50);
-            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(289, 45);
-            this.axWindowsMediaPlayer1.TabIndex = 8;
+            this.MediaPlayer.Enabled = true;
+            this.MediaPlayer.Location = new System.Drawing.Point(13, 50);
+            this.MediaPlayer.Name = "MediaPlayer";
+            this.MediaPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("MediaPlayer.OcxState")));
+            this.MediaPlayer.Size = new System.Drawing.Size(289, 45);
+            this.MediaPlayer.TabIndex = 8;
             // 
             // hScrollBar1
             // 
@@ -145,11 +147,11 @@
             this.Controls.Add(this.lblCopyright);
             this.Controls.Add(this.btnAbout);
             this.Controls.Add(this.btnSetup);
-            this.Controls.Add(this.axWindowsMediaPlayer1);
+            this.Controls.Add(this.MediaPlayer);
             this.Name = "Form1";
             this.Text = "My Jukebox v1.0";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MediaPlayer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,8 +165,9 @@
         private System.Windows.Forms.TextBox txtGenre;
         private System.Windows.Forms.ListBox lstboxTracks;
         private System.Windows.Forms.ListBox lstboxPlaylist;
-        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+        private AxWMPLib.AxWindowsMediaPlayer MediaPlayer;
         private System.Windows.Forms.HScrollBar hScrollBar1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

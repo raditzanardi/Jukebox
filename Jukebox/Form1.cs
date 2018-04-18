@@ -43,21 +43,24 @@ namespace Jukebox
             if (txtPlayingNow.Text == "")
             {
                 txtPlayingNow.Text = lstboxTracks.SelectedItem.ToString();
-                axWindowsMediaPlayer1.URL = files[lstboxTracks.SelectedIndex].FullName;
+                MediaPlayer.URL = files[lstboxTracks.SelectedIndex].FullName;
                
             }
             else
             {
                 lstboxPlaylist.Items.Add(lstboxTracks.SelectedItem);
             }
-
+            //Pseudo Code
+            //If MediaPlayer.Playing = Timer1.Enabled = False
+            //If MediaPlayer.Stopped = Timer1.Enabled = True
+            //MediaPlayer.URL = files[listboxPlaylist]
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             txtGenre.Text = genres[0];
             //Makes the media player invisible to the user
-            axWindowsMediaPlayer1.Visible = false;
+            MediaPlayer.Visible = false;
 
             //Load the tracks into the application
             DirectoryInfo dinfo = new DirectoryInfo(@"C:\Users\Radit\source\repos\Jukebox\Tracks");
