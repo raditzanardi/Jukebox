@@ -149,6 +149,7 @@
             this.Controls.Add(this.btnSetup);
             this.Controls.Add(this.MediaPlayer);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "My Jukebox v1.0";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.MediaPlayer)).EndInit();

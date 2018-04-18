@@ -45,7 +45,6 @@
             this.label1.Size = new System.Drawing.Size(243, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "My Juke Box v2.0";
-            
             // 
             // textBox1
             // 
@@ -88,6 +87,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "AboutForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "About";
             this.Load += new System.EventHandler(this.AboutForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
